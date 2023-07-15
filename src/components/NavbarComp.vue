@@ -6,6 +6,7 @@
                 <router-link to="/about" class="custom-nav-links">About</router-link>
                 <router-link to="/projects" class="custom-nav-links">Projects</router-link>
                 <router-link to="/contact" class="custom-nav-links">Contact</router-link>
+                <router-link to="/moreabout" class="custom-nav-links">Media</router-link>
             </ul>
         </nav>
     </div>
@@ -35,6 +36,6 @@ li{
 }
 
 a.router-link-active {
-  border-bottom: 5px solid #0B62E0;
+  border-bottom: 5px solid var(--activeLink);
 }
 </style>

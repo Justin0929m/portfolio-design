@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+:root{
+  --linkColor: #868E96;
+  --activeLink: #0B62E0;
+  --hoverBgColor: #212529;
+  --bgContactColor: gray;
+}
+
 .content{
   max-width: 700px;
   margin: auto;
@@ -22,4 +29,31 @@ img{
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
+}
+
+/* Post Styling */
+
+.post-img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    bottom: 2rem;
+}
+
+.post{
+    padding: 2rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.post:hover{
+    background-color: var(--hoverBgColor);
+    border-radius: 1rem;
+}
+
+.post-header{
+    display: flex;
+}
+
+.date{
+    font-size: .8rem;
 }

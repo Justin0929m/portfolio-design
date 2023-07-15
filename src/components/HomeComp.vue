@@ -51,7 +51,7 @@ h1 {
 
 .btn-group {
     display: flex;
-    color: #868E96;
+    color: var(--linkColor);
 }
 
 img {

@@ -1,16 +1,16 @@
 <template>
   <Home/>
-  <Navbar/>
   <router-view/>
+  <Footer/>
 </template>
 
 <script>
 import Home from '@/components/HomeComp.vue'
-import Navbar from '@/components/NavbarComp.vue'
+import Footer from '@/components/FooterComp.vue'
 export default {
   components: {
     Home,
-    Navbar
+    Footer
   }
 }
 </script>

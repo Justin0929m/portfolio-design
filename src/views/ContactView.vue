@@ -1,38 +1,36 @@
 <template>
     <div class="content mb-5">
-        <div class="post">
+        <div class="post m-0">
             <div class="post-header h-100">
-                    <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" class="rounded-circle post-img" alt="">
+                    <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" class="rounded-circle post-img" alt="Justin Scholtz" loading="lazy">
                     <div class="post-detail w-100">
                         <div class="d-flex align-items-center">
                             <p class="m-0 ps-3 fw-bold">Justin</p>
                             <p class="m-0 ps-3 fw-lighter date">15 July 2023</p>
                         </div>
-                        <div class="ms-3">
-                            <p class="badge text-bg-primary"><i class="bi bi-code-slash"></i> coding</p>
-                        </div>
-                        <div class="msg ms-3 w-100">
-                    <h4 class="text-uppercase">Leave me a message</h4><i @click="toggleContact" class="bi bi-arrow-down icon rounded-circle"></i>
+                        <p class="mt-3">Feel free to leave me a message, lets talk.</p>
+                        <div class="msg w-100 mt-3">
+                    <h4 class="text-uppercase">Get In Touch</h4><i @click="toggleContact" class="bi bi-caret-down-square-fill icon rounded-circle"></i>
                 </div>
-                <form action="#" class="w-100 ms-3" :class="{ 'hide-form': hide }">
+                <form action="https://formspree.io/f/xdovbwvy" method="POST" class="w-100" :class="{ 'hide-form': hide }">
                     <div class="mb-3">
                                 <label for="text" class="form-label">Name</label>
-                                <input type="text" class="form-control" name="full-name" id="text" placeholder="John Doe">
+                                <input type="text" class="form-control border-0" name="full-name" id="text" required>
                             </div>
                     <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                            <input type="email" class="form-control border-0" name="email" id="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" name="subject" id="subject">
+                            <label for="text" class="form-label">Subject</label>
+                            <input type="text" class="form-control border-0" name="subject" id="subject" required>
                         </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                        <textarea class="form-control border-0" id="message" rows="3" name="message"></textarea>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-primary">Send Message</button>
+                        <button class="btn btn-dark w-100">Send Message</button>
                     </div>
                 </form>
                     </div>
@@ -45,7 +43,7 @@
 export default {
     data(){
         return{
-            hide: false
+            hide: true
         }
     },
     methods:{
@@ -57,24 +55,36 @@ export default {
 </script>
 
 <style scoped>
+
+
+
+input,textarea{
+    background-color: #212529;
+    color: #fff;
+}
+
+input:focus, textarea:focus{
+    background-color: #212529;
+    color: #fff;
+}
 .msg{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bgContactColor);
+    background-color: #495057;
     padding: 1rem;
-    color: #000;
+    color: #fff;
 }
 
 .icon{
     cursor: pointer;
-    color: var(--activeLink);
+    color: #fff;
 }
 
 form{
-    background-color: var(--bgContactColor);
+    background-color: #495057;
     padding: 1rem;
-    color: #000;
+    color: #fff;
 }
 
 .hide-form{

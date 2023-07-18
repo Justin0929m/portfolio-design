@@ -1,23 +1,33 @@
 <template>
     <div class="content">
-        <div class="header"></div>
+        <div class="header mb-3">
+            <img src="https://images.unsplash.com/photo-1507939040444-21d4dca3781e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="">
+        </div>
         <div class="header-grid gap-2">
             <div class="header-img-follow">
-                <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" class="rounded-circle" alt="">
-                <button class="btn btn-primary h-50">Follow <i class="bi bi-twitter"></i></button>
+                <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" alt="Justin Scholtz" class="circle" loading="lazy">
+                <router-link to="/contact" class="custom-btn"><button class="btn btn-dark">Contact <i class="bi bi-telephone-fill ps-1"></i></button></router-link>
             </div>
-            <div class="header-title">
+            <div>
                 <h1>Justin Scholtz</h1>
             </div>
-            <div class="header-test">
-                <p>Aspiring Front End Developer</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, facilis.</p>
+            <div>
+                <p>Aspiring Front End Developer<i class="bi bi-braces ps-2"></i></p>
+                <code>console.log("Code, Creativity, and Coffee: My Frontend Journey.<i class="bi bi-cup-hot-fill ps-2"></i>")</code>
             </div>
-            <div class="btn-group gap-3">
-                <i class="bi bi-briefcase-fill icons"></i>
-                <p>Available</p>
+            <div class="btn-group gap-2 mt-3">
                 <i class="bi bi-calendar-day-fill icons"></i>September 29th
                 <i class="bi bi-calendar-plus icons"></i>Joined June 2018
+            </div>
+            <div>
+                <nav>
+                    <ul class="mt-5">
+                        <router-link to="/" class="custom-nav-links">Feed</router-link>
+                        <router-link to="/about" class="custom-nav-links">About Me</router-link>
+                        <router-link to="/projects" class="custom-nav-links">Projects</router-link>
+                        <router-link to="/contact" class="custom-nav-links">Contact</router-link>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -28,19 +38,22 @@
 </script>
 
 <style scoped>
+
 h1 {
     font-weight: bold;
 }
 
 .header {
-    background: url(https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80) center no-repeat;
-    height: 25vh;
+    height: 35vh; 
+    overflow: hidden;
 }
 
 .header-grid {
     display: grid;
-    grid-template-rows: 100px 70px 90px 50px;
-    padding-inline: 2rem;
+    grid-template-rows: repeat(4, auto);
+    padding-inline: 1rem;
+    position: relative;
+    top: -5rem;
 }
 
 .header-img-follow {
@@ -52,14 +65,40 @@ h1 {
 .btn-group {
     display: flex;
     color: var(--linkColor);
+    font-size: .8rem;
 }
 
-img {
-    border: 3px solid #fff;
-    width: 10rem;
-    height: 10rem;
+.custom-btn{
+    align-self: end;
+    margin-bottom: 1rem;
+}
+
+.circle {
+    border: 5px solid #fff;
     object-fit: cover;
-    position: relative;
-    bottom: 2rem;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: clamp(2rem, 40%, 10rem); 
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-inline: .1rem;
+}
+
+.custom-nav-links{
+    text-decoration: none;
+    color: #fff;
+}
+
+a{
+    padding: .3rem;
+}
+
+.custom-nav-links.router-link-active {
+    border-bottom: 5px solid var(--activeLink);
+    background-color: var(--hoverBgColor);
 }
 </style>

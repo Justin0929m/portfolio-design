@@ -1,12 +1,15 @@
 <template>
     <div class="content">
         <div class="header mb-3">
-            <img src="https://images.unsplash.com/photo-1507939040444-21d4dca3781e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1507939040444-21d4dca3781e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="">
         </div>
         <div class="header-grid gap-2">
             <div class="header-img-follow">
-                <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" alt="Justin Scholtz" class="circle" loading="lazy">
-                <router-link to="/contact" class="custom-btn"><button class="btn btn-dark">Contact <i class="bi bi-telephone-fill ps-1"></i></button></router-link>
+                <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" alt="Justin Scholtz" class="circle"
+                    loading="lazy">
+                <a target="_blank" href="https://drive.google.com/file/d/1vf9uVZKDlC2XRyc1jNNaw4ABykPqcnw9/view?usp=sharing"
+                    class="btn btn-dark custom-btn px-2">Resume <i class="bi bi-download ps-2"></i></a>
             </div>
             <div>
                 <h1>Justin Scholtz</h1>
@@ -38,13 +41,12 @@
 </script>
 
 <style scoped>
-
 h1 {
     font-weight: bold;
 }
 
 .header {
-    height: 35vh; 
+    height: 35vh;
     overflow: hidden;
 }
 
@@ -68,7 +70,7 @@ h1 {
     font-size: .8rem;
 }
 
-.custom-btn{
+.custom-btn {
     align-self: end;
     margin-bottom: 1rem;
 }
@@ -78,22 +80,22 @@ h1 {
     object-fit: cover;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
-    width: clamp(2rem, 40%, 10rem); 
+    width: clamp(2rem, 40%, 10rem);
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     padding-inline: .1rem;
 }
 
-.custom-nav-links{
+.custom-nav-links {
     text-decoration: none;
     color: #fff;
 }
 
-a{
+a {
     padding: .3rem;
 }
 

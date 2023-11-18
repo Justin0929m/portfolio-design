@@ -28,6 +28,9 @@
           developer, Life Choices prepared me well for the next stage of my life so I'm ready for anything and everything.
         </p>
         <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" class="img" alt="Justin Scholtz" loading="lazy">
+
+        <!-- Skills Section -->
+        
         <p class="text-center my-5 display-6">Skills</p>
         <div class="custom-container">
           <div class="card custom-border bg-dark text-white w-100" style="width: 18rem;" v-for="data in skills" :key="data.id">
@@ -41,6 +44,22 @@
             </div>
           </div>
         </div>
+
+        <!-- About Me Section -->
+
+        <p class="text-center my-5 display-6">More About Me</p>
+          <div class="custom-container">
+            <div class="card custom-border bg-dark text-white w-100" style="width: 18rem;" v-for="data in aboutMe" :key="data.id">
+              <div class="d-flex justify-content-center">
+                <i :class="data.img" class="pt-3"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-title text-center">{{ data.title }}</p>
+                <p class="card-text">{{ data.desc }}</p>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
   </div>
@@ -51,10 +70,14 @@ export default {
   computed: {
     skills() {
       return this.$store.state.skills
+    },
+    aboutMe() {
+      return this.$store.state.aboutMe
     }
   },
   mounted() {
     this.$store.dispatch('getSkills')
+    this.$store.dispatch('getAboutMe')
   }
 }
 </script>

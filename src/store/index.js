@@ -7,7 +7,8 @@ export default createStore({
     jsonData: [],
     workData: [],
     eduData: [],
-    skills: []
+    skills: [],
+    aboutMe: []
   },
   getters: {
   },
@@ -23,6 +24,9 @@ export default createStore({
     },
     setSkills(state, data){
       state.skills = data
+    },
+    setAboutMe(state, data){
+      state.aboutMe = data
     }
   },
   actions: {
@@ -45,6 +49,12 @@ export default createStore({
       const fetchedData = await fetch(url)
       const {skills} = await fetchedData.json()
       commit('setSkills', skills)
+    },
+
+    async getAboutMe({commit}){
+      const fetchedData = await fetch(url)
+      const {aboutMe} = await fetchedData.json()
+      commit('setAboutMe', aboutMe)
     }
   },
   modules: {
